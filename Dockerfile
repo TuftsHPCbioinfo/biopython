@@ -1,5 +1,5 @@
-FROM condaforge/mambaforge:latest
+FROM python:3.11-slim
 
-RUN mamba install -c conda-forge biopython==1.8.3
+RUN pip install biopython==1.8.3
 
 RUN pip install igraph ipython ipykernel
