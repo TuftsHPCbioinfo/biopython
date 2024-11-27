@@ -25,7 +25,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            yzhangtufts/biopython
+            tuftsttsrt/biopython
 
       - name: Build & Publish Docker Image
         uses: docker/build-push-action@v5
@@ -33,5 +33,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.metadata.outputs.tags }}
+          tags: 1.84
           labels: ${{ steps.metadata.outputs.labels }}
